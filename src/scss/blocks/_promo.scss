@@ -24,10 +24,10 @@
         font-size: 14px;
         line-height: 21px;
         margin-right: 40px;
-        color: $links;
+        color: $text;
         transition: 0.5s all;
         &:hover {
-            color: $links-hover;
+            color: $text-hover;
             text-decoration: none;
         }
     }
