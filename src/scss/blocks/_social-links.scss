@@ -1,9 +1,20 @@
 .social-links {
-    font-family: 'icomoon';
     text-decoration: none;
     color:$text;
     font-size: 20px;
     transition: 0.5s all;
+    .icon-github:before {
+        content: "\eab0";
+        font-family: 'icomoon';
+    }
+    .icon-vk:before {
+        content: "\ea98";
+        font-family: 'icomoon';
+    }
+    .icon-telegram:before {
+        content: "\ea95";
+        font-family: 'icomoon';
+    }
     &:hover {
         text-decoration: none;
         color: $text-hover;
