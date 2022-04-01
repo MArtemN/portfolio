@@ -1,0 +1,116 @@
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    top: 0;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s all;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: relative;
+        background-color: $main-color;
+        width: 345px;
+        height: 100%;
+        padding-top: 140px;
+        padding-left: 40px;
+        z-index: 50;
+        transition: 0.5s all;
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 29px;
+        height: 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 29px;
+            height: 2px;
+            border-radius: 5px;
+            background-color: $text;
+            transition: 0.5s all;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            &:before, &:after {
+                background-color: $text-hover;
+            }
+        }
+    }
+    &__list {
+        list-style-type: none;
+    }
+    &__item {
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: $text;
+            padding-left: 35px;
+            transition: 0.5s all;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 10px;
+                width: 15px;
+                height: 15px;
+                border: 1px solid $text;
+                border-radius: 100%;
+                transition: 0.5s all;
+            }
+        }
+        &:hover {
+            a {
+                color: $text-hover;
+                &:before {
+                    border: 1px solid $text-hover;
+                    background-color: $text-hover;
+                }
+            }
+        }
+    }
+    &__social {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0.75;
+    }
+}

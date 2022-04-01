@@ -1,0 +1,11 @@
+.social-links {
+    font-family: 'icomoon';
+    text-decoration: none;
+    color:$text;
+    font-size: 20px;
+    transition: 0.5s all;
+    &:hover {
+        text-decoration: none;
+        color: $text-hover;
+    }
+}

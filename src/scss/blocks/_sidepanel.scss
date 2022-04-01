@@ -8,17 +8,6 @@
     align-items: center;
     width: 25px;
     height: 340px;
-    &__link {
-        font-family: 'icomoon';
-        text-decoration: none;
-        color:$text;
-        font-size: 20px;
-        transition: 0.5s all;
-        &:hover {
-            text-decoration: none;
-            color: $text-hover;
-        }
-    }
     &__divider {
         width: 2px;
         height: 70px;
