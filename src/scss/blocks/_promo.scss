@@ -6,9 +6,7 @@
         position: relative;
         padding-left: 10px;
         z-index: 2;
-        &:before {
-            @include circle;
-        }
+        @include before_circle;
     }
     &__title {
         margin-top: 9px;

@@ -1,0 +1,91 @@
+.resume {
+    padding-top: 126px;
+    h2 {
+        position: relative;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        column-gap: 140px;
+        padding-left: 72px;
+        margin-top: 60px;
+    }
+    &__column-title {
+        padding-left: 43px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -7px;
+            width: 15px;
+            height: 15px;
+            background-color: $main-color;
+            border-radius: 100%;
+        }
+    }
+    &__column {
+        ul {
+            list-style-type: none;
+            li {
+                margin: 45px 0;
+                padding-left: 43px;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: -53px;
+                    left: 0;
+                    width: 1px;
+                    height: calc(100% + 53px);
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__item {
+        &-head {
+            display: grid;
+            grid-template-columns: 36px auto;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -43px;
+                width: 43px;
+                height: 1px;
+                background-color: #000;
+            }
+        }
+        &-icon {
+            position: relative;
+            @include before_circle;
+            img {
+                padding: 14px 0 0 17px;
+            }
+            &:before {
+                top: 0;
+            }
+        }
+        &-title-wrapper {
+            padding-left: 20px;
+        }
+        &-location {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-body {
+            margin-top: 12px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}

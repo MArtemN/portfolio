@@ -1,0 +1,13 @@
+.divider {
+    margin-top: 25px;
+    width: 60px;
+    height: 3px;
+    background-color: $main-color;
+    &_mt4 {
+        margin-top: 4px;
+    }
+    &_center {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
