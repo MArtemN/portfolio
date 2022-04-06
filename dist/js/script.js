@@ -13,4 +13,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
         menuHamburger.classList.toggle('active');
     });
 
+    /* auto percent */
+    const percentMeans = document.querySelectorAll('.percent-item__mean'),
+        percentLines = document.querySelectorAll('.percent-item__filled-line');
+
+    percentMeans.forEach((item, i) => {
+        percentLines[i].style.width = item.innerHTML;
+    });
+    
 });
