@@ -14,10 +14,6 @@
     }
     &__descr-wrapper {
         margin-top: 6px;
-        display: grid;
-        grid-template-rows: minmax(245px, auto) minmax(255px, auto);
-        row-gap: 40px;
-        align-content: start;
         h2 {
             position: relative;
             padding: 1px 0 0 12px;
@@ -31,6 +27,7 @@
         }
     }
     &__skills {
+        margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(2, 260px);
         grid-template-rows: repeat(2, minmax(115px, auto));

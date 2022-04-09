@@ -21,4 +21,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
         percentLines[i].style.width = item.innerHTML;
     });
     
+    /* mobile skills slider */
+    const swiper = new Swiper('.skills__slider', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+
 });
