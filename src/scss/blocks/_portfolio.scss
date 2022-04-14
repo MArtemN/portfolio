@@ -11,6 +11,20 @@
     &__subtitle {
         margin-top: 6px;
     }
+    &__slider {
+        display: none;
+        padding-top: 40px;
+        .portfolio__item {
+            height: 300px;
+        }
+        .swiper-scrollbar {
+            position: relative;
+            margin-top: 30px;
+            .swiper-scrollbar-drag {
+                background-color: $main-color;
+            }
+        }
+    }
     &__wrapper {
         display: grid;
         grid-template: repeat(2, 280px) / repeat(4, 280px);

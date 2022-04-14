@@ -42,6 +42,24 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 350px 585px;
+            padding: 0;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -81,9 +99,54 @@
 
     .skills {
         &__wrapper {
-            grid-template: repeat(2,minmax(270px,auto))/repeat(2, 1fr);
+            grid-template: repeat(2,minmax(270px,auto)) / repeat(2, 1fr);
             gap: 20px;
         }
+        &__item {
+            &_unavailable {
+                .unavailable-overlay {
+                    background-color: rgba(0, 0, 0, 0.65);
+                    justify-content: center;
+                    div {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+
+    .price {
+        &__wrapper {
+            padding: 60px 0 0 0;
+            grid-template-columns: repeat(2,350px);
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 350px 370px;
+            column-gap: 10px;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            &__input {
+                height: 45px;
+            }
+            &__triggers {
+                button {
+                    padding: 5px 25px;
+                }
+            }
+        }
+        
     }
 }
 
@@ -108,6 +171,30 @@
     .skills {
         &__percent-wrapper {
             grid-template-columns: 1fr;
+        }
+    }
+
+    .price {
+        padding-top: 46px;
+        &__wrapper {
+            padding-top: 20px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+        &__photo {
+            display: none;
+        }
+        .form {
+            &__triggers {
+                button {
+                    padding: 12px 25px;
+                }
+            }
         }
     }
 }
@@ -176,6 +263,43 @@
         }
         &__percent-wrapper {
             padding-top: 48px;
+        }
+    }
+
+    .portfolio {
+        padding-top: 46px;
+        &__wrapper {
+            display: none;
+        }
+        &__slider {
+            display: block;
+        }
+        .title_fz36 {
+            font-size: 24px;
+            line-height: 36px;  
+        }
+    }
+
+    .contacts {
+        padding: 46px 0 50px 0;
+        .title_fz36 {
+            font-size: 24px;
+            line-height: 36px;  
+        }
+        .form {
+            &__textarea {
+                height: 143px;
+            }
+            &__triggers {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                button {
+                    width: 219px;
+                    height: 45px;
+                    margin-top: 20px;
+                    grid-row: 2;
+                }
+            }
         }
     }
 }

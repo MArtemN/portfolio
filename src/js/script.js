@@ -26,7 +26,48 @@ document.addEventListener("DOMContentLoaded", function(e) {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+        },
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            stopOnLastSlide: false,
+            disableOnInteraction: true
+        },
+        effect: 'flip',
+        flipEffect: {
+            slideShadows: true,
+            limitRotation: true
         }
     });
+
+    /* mobile portfolio slider */
+    const swiper2 = new Swiper('.portfolio__slider', {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        autoplay: {
+            delay: 2500,
+            stopOnLastSlide: false,
+            disableOnInteraction: true
+        },
+        effect: 'cube',
+            cubeEffect: {
+            slideShadows: true,
+        },
+    });
+
+    /* check available skills */
+    const skills = document.querySelectorAll('.skills__item');
+
+    function checkSkills() {
+        skills.forEach(item => {
+            if (item.classList.contains('skills__item_unavailable')) {
+                item.insertAdjacentHTML('afterbegin', '<div class="unavailable-overlay"><div>Пока не работает, но скоро откроется!</div></div>');
+            }
+        });
+    }
+    
+    checkSkills();
 
 });
