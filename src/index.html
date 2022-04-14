@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Темкино портфолию</title>
+    <title>WebVibe-Тульская разработка</title>
     <meta name="title" content="Мое портфолио">
     <meta name="description" content="Здесь вы сможете ознакомиться с моими работами и узнать больше обо мне">
 
@@ -591,7 +591,7 @@
                         </div>
                         <div class="form__input">
                             <input type="email" required name="email" id="email">
-                            <label for="emal">Ваша почта</label>
+                            <label for="email">Ваша почта</label>
                         </div>
                         <div class="form__textarea">
                             <textarea name="text" required id="text"></textarea>
@@ -600,7 +600,7 @@
                         <div class="form__triggers">
                             <button class="form__btn btn">Отправить сообщение</button>
                             <div class="form__policy">
-                                <input type="checkbox" required>
+                                <input name="check" type="checkbox" required>
                                 <span>Я согласен(а) с <a href="/policy.html">политикой конфиденциальности</a></span>
                             </div>
                         </div>
@@ -610,6 +610,15 @@
         </div>
     </section>
 
+    <div class="overlay">
+        <div class="modal" id="thanks">
+            <div class="modal__close"></div>
+            <div class="modal__subtitle title title_fz16">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Я свяжусь с Вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
