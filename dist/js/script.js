@@ -20,6 +20,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
     percentMeans.forEach((item, i) => {
         percentLines[i].style.width = item.innerHTML;
     });
+
+    /* close menu after click */
+    const menuList = document.querySelector('.menu__list');
+    
+    menuList.addEventListener('click', (e) => {
+        menuList.querySelectorAll('a').forEach(item => {
+            if (e.target === item) {
+                menuHamburger.classList.remove('active');
+            }
+        });
+    });
     
     /* mobile skills slider */
     const swiper = new Swiper('.skills__slider', {
@@ -69,6 +80,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }
     
     checkSkills();
+    
+    /* blog modal */
+    $('.blog').on('click', function(e) {
+        e.preventDefault();
+        $('.overlay, #development').fadeIn();
+    });
 
     /* send feedback form */
     $('form').submit(function(e) {
@@ -89,8 +106,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
     });
 
     /* close modal */
-    $('.modal__close').on('click', function() {
-        $('.overlay').fadeOut();
+    $('.modal__close, .overlay').on('click', function(e) {
+        if ($(e.target).hasClass('overlay') || $(e.target).hasClass('modal__close')) {
+            $('.overlay').fadeOut();
+        };
     });
     
     /* wow init */
