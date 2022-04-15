@@ -93,4 +93,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         $('.overlay').fadeOut();
     });
     
+    /* wow init */
+    new WOW().init();
+    
 });
