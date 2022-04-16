@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
             data: $(this).serialize()
         }).done(function() {
             $(this).find("input").val("");
+            $('.overlay, #development').fadeOut();
             $('.overlay, #thanks').fadeIn('slow');
             setTimeout(function(){
                 $('.overlay, #thanks').fadeOut();

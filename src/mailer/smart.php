@@ -9,9 +9,8 @@ if ($name && $email && $message && $check) {
 	$to = 'ma@webvibe.ru';
 	$subject = 'Новая заявка с формы';
     $headers = array(
-        'From' => 'ma@webvibe.ru',
-        'Reply-To' => 'ma@webvibe.ru',
-        'X-Mailer' => 'PHP/' . phpversion()
+        'From' => 'Артем Матюхин <ma@webvibe.ru>',
+        'Bcc' => 'martemn71@gmail.com'
     );
 	$message = '
 		Новая заявка с формы
