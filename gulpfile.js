@@ -47,6 +47,12 @@ gulp.task('scripts', function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task('htmlToPhp', function() {
+    return gulp.src("dist/index.html")
+    .pipe(rename({extname : '.php'}))
+    .pipe(gulp.dest("./dist"));
+});
+
 gulp.task('icons', function() {
     return gulp.src("src/icons/**/*")
     .pipe(gulp.dest("dist/icons"))
@@ -66,4 +72,4 @@ gulp.task('fonts', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'icons', 'html', 'images', 'fonts'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'icons', 'html', 'htmlToPhp', 'images', 'fonts'));
