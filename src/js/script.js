@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     
     /* hamburger menu */
     const hamburgerButton = document.querySelector('.hamburger'),
-        closeMenuButton = document.querySelector('.menu__close');
+        closeMenuButton = document.querySelector('.menu__close'),
         menuHamburger = document.querySelector('.menu');
 
     hamburgerButton.addEventListener('click', () => {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     $('.modal__close, .overlay').on('click', function(e) {
         if ($(e.target).hasClass('overlay') || $(e.target).hasClass('modal__close')) {
             $('.overlay').fadeOut();
-        };
+        }
     });
     
     /* wow init */
